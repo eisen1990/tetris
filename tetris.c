@@ -4,6 +4,48 @@
 #include <fcntl.h>
 #include <time.h>
 #include <stdlib.h>
+
+int kbhit(char *key);
+
+typedef struct _pos{
+	int x;
+	int y;
+}POS;
+
+void init_pos(POS *p)
+{
+	p->x = 20;
+	p->y = 20;
+}
+
+int main(void)
+{
+	char key = '\0';
+	int i = 0;
+	POS pos;
+	init_pos(&pos);
+	system("clear");
+	while(1)
+	{
+		if(kbhit(&key))
+		{
+			system("clear");
+			if(key == 'k')
+				pos.y++;
+			else if(key == 'j')
+				pos.y--;
+			else ;
+			for(i=0; i < pos.y; i++)
+				printf("\n");
+			printf("ㅁ");
+			//printf("%c\n",key);
+		}
+		  
+		//usleep(100*1000);
+	}
+	return 0;
+}
+
 int kbhit(char *key)
 {
 	struct termios oldt, newt;
@@ -32,24 +74,3 @@ int kbhit(char *key)
 	return 0;
 }
 
-int main(void)
-{
-	char key = '\0';
-	system("clear");
-	while(1)
-	{
-		if(kbhit(&key))
-		{
-			system("clear");
-			if(key == 'k')
-				printf("1\n");
-			else if(key == 'j')
-				printf("2\n");
-			else ;
-			//printf("%c\n",key);
-		}
-		  
-		//usleep(100*1000);
-	}
-	return 0;
-}
