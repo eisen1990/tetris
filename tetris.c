@@ -74,28 +74,3 @@ int kbhit(char *key)
 	return 0;
 }
 
-<<<<<<< HEAD
-int main(void)
-{
-	char key = '\0';
-	system("clear");
-	while(1)
-	{
-		if(kbhit(&key))
-		{
-			system("clear");
-			if(key == 'k')
-				printf("1\n");
-			else if(key == 'j')
-				printf("2\n");
-			else ;
-			//printf("%c\n",key);
-            // foo bar
-		}
-		  
-		//usleep(100*1000);
-	}
-	return 0;
-}
-=======
->>>>>>> f77b98c311c68d848a835f4528827186bc0d14d6
