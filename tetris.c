@@ -39,6 +39,7 @@ int main(void)
 				printf("\n");
 			printf("ㅁ");
 			//printf("%c\n",key);
+            // foo bar test2
 		}
 		  
 		//usleep(100*1000);
@@ -73,4 +74,3 @@ int kbhit(char *key)
 
 	return 0;
 }
-
