@@ -47,6 +47,7 @@ int main(void)
 				printf("2\n");
 			else ;
 			//printf("%c\n",key);
+            // foo bar
 		}
 		  
 		//usleep(100*1000);
